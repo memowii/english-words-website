@@ -7,14 +7,10 @@
             <iframe width="200" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
         </div>
         <div class="col-xl-9" style="background-color:lavenderblush;">
-            <div class="row">
-                <span>
-                    <code>{{ ipa_symbol }}</code>
-                </span>
-            </div>
-            <div class="row">
-                {% for post in posts %}
-                <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
+            <div class="ipa-symbol"><code>{{ ipa_symbol }}</code></div>
+            <div class="words-with-ipa">
+                {% for word_with_ipa in words_with_ipa %}
+                <div class="word-with-ipa"><p>{{ word_with_ipa.word }}||</p></div>
                 {% endfor %}
             </div>
         </div>
