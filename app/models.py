@@ -13,3 +13,6 @@ class DuolingoWord(db.Model):
     word = db.Column(db.String(32))
     pronunciation = db.Column(db.String(32))
     word_class_id = db.Column(db.Integer, db.ForeignKey('word_class.id'))
+
+    def __repr__(self):
+        return '<Duolingo Word {}>'.format(self.word)
