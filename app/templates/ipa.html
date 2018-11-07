@@ -10,7 +10,7 @@
             <div class="ipa-symbol"><code>{{ ipa_symbol }}</code></div>
             <div class="words-with-ipa">
                 {% for word_with_ipa in words_with_ipa %}
-                <div class="word-with-ipa"><p>{{ word_with_ipa.word }}||</p></div>
+                <div class="word-with-ipa"><p>{{ word_with_ipa.word }} -- {{ word_with_ipa.pronunciation }} ||</p></div>
                 {% endfor %}
             </div>
         </div>
