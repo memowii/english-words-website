@@ -1,0 +1,19 @@
+#ipa-grid {
+    margin: 50px auto;
+    width: 1366px;
+    border-style: solid;
+    border-width: thin;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr;
+}
+
+#ipa-youtube-video {
+    margin: 25px;
+}
+
+#ipa-symbol {
+    text-align: center;
+}
+
+/* 1366x768 */

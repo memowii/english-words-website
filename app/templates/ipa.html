@@ -1,18 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-xl-3" style="background-color:lavender;">
-            <iframe width="200" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+<div id="ipa-grid">
+    <div id="ipa-youtube-video">
+        <iframe type="text/html" width="400" height="400"
+                src="https://www.youtube.com/embed/tgbNymZ7vqY"
+                frameborder="0"></iframe>
+    </div>
+    <div id="ipa-data">
+        <div id="ipa-symbol">
+            <code>{{ ipa_symbol }}</code>
         </div>
-        <div class="col-xl-9" style="background-color:lavenderblush;">
-            <div class="ipa-symbol"><code>{{ ipa_symbol }}</code></div>
-            <div class="words-with-ipa">
-                {% for word_with_ipa in words_with_ipa %}
-                <div class="word-with-ipa"><p>{{ word_with_ipa.word }} -- {{ word_with_ipa.pronunciation }} ||</p></div>
-                {% endfor %}
+        <div id="ipa-words">
+            {% for word_with_ipa in words_with_ipa %}
+            <div class="ipa-word">
+                <span>{{ word_with_ipa.word }} -- {{ word_with_ipa.pronunciation }} ||</span>
             </div>
+            {% endfor %}
         </div>
     </div>
 </div>
