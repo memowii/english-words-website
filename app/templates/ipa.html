@@ -14,7 +14,9 @@
         <div id="ipa-words">
             {% for word_with_ipa in words_with_ipa %}
             <div class="ipa-word">
-                <span>{{ word_with_ipa.word }} -- {{ word_with_ipa.pronunciation }} ||</span>
+                <a href="#" data-toggle="tooltip" data-placement="top" title="{{ word_with_ipa.pronunciation }}">
+                    <span>{{ word_with_ipa.word }}</span>
+                </a>
             </div>
             {% endfor %}
         </div>
